@@ -2,3 +2,15 @@ body {
   background-image:url(../images/starwars-stars.jpeg);
   background-size: auto;
 }
+
+/* styling for title image */
+.title {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+.title img {
+  width: 250px;
+}
