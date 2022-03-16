@@ -2,7 +2,7 @@ body {
   background-image:url(../images/starwars-stars.jpeg);
   background-size: auto;
 }
-.btn{
+.weekday-btn{
   background-color:#ffe81f;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +15,7 @@ body {
   top:50px;
   left:30px;
 }
-.btn:hover {
+.weekday-btn:hover {
   background-color: #ffe81f;
   color: white;
   transition: all .3s ease-in-out;
