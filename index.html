@@ -6,26 +6,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css"></link>
-  <title>Document</title>
+  <title>Weekly Schedule</title>
 </head>
 <body>
-  <main class="flex-row">
-    <!-- left side with weather pane and weekly scheduler -->
+  <main class="flex-row row">
+    <!-- left side with week day choices -->
     <div class="col-12 col-md-2">
       <!-- need 7 weekday buttons -->
-
     </div>
 
     <!-- middle section with daily 9-5 scdule -->
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 col-lg-7">
       <!-- need container for schedule -->
-      <!-- need 9-5 text area tags -->
+      <div class="daily-schedule">
+        <!-- Current Day -->
+        <div class="row current-day">
+          <div class="col-12">
+            <h3 class="today"> Today's Date Here </h3>
+          </div>
+        </div>
+        <!-- 9-5 text area tags -->
+        <!-- 9am -->
+        <div class="row time-block" data-hour="9">
+          <div class="col-2 hour">9am</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 10am -->
+        <div class="row time-block" data-hour="10">
+          <div class="col-2 hour">10am</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 11am -->
+        <div class="row time-block" data-hour="11">
+          <div class="col-2 hour">11am</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 12pm -->
+        <div class="row time-block" data-hour="12">
+          <div class="col-2 hour">12pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 1pm -->
+        <div class="row time-block" data-hour="13">
+          <div class="col-2 hour">1pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 2pm -->
+        <div class="row time-block" data-hour="14">
+          <div class="col-2 hour">2pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 3pm -->
+        <div class="row time-block" data-hour="15">
+          <div class="col-2 hour">3pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 4pm -->
+        <div class="row time-block" data-hour="16">
+          <div class="col-2 hour">4pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+        <!-- 5pm -->
+        <div class="row time-block" data-hour="17">
+          <div class="col-2 hour">5pm</div>
+          <textarea class="col-8 description"></textarea>
+          <div class="col-2">
+            <div class="saveBtn">
+              <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
+              <p>Save</p> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
 
     </div>
 
     <!-- right section with title in starwars font and API generated quote -->
-    <div class="col-12 col-md-4">
-      <!-- need div for image -->
+    <div class="col-12 col-md-4 col-lg-3">
+      <!-- div for title image -->
+      <div class="title">
+        <img class="col-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
+        <img class="col-12" src="./assets/images/schedule.png" alt="Daily Schedule written in the Star Wars font">
+      </div>
+      
 
       <!-- need div for quote -->
 
