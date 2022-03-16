@@ -6,12 +6,9 @@
 
 // curl -X GET "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote" -H "accept: text/plain"
 
-
 var pullQuote = function() {
-    console.log("function fires!");
     
     var quoteUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
-    console.log(quoteUrl);
 
     // pulls from api to get a random quote
     fetch(quoteUrl).then(function(response) {
@@ -19,10 +16,20 @@ var pullQuote = function() {
         if (response.ok) {
             response.json().then(function(data) {
             console.log(data);
-            // displayQuote(data.content);
+            displayQuote(data);
             });
         };
     });
+};
+
+var displayQuote = function(quote) {
+
+    // create a span to hold quotes
+    var quoteEl = document.createElement('span');
+    quoteEl.textContent = quote.content;
+    console.log(quoteEl);
+
+    // append to container
 };
 
 pullQuote();
