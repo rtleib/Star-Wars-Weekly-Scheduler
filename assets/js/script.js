@@ -12,4 +12,17 @@ var pullQuote = function() {
     
     var quoteUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
     console.log(quoteUrl);
+
+    // pulls from api to get a random quote
+    fetch(quoteUrl).then(function(response) {
+    console.log(response);
+        if (response.ok) {
+            response.json().then(function(data) {
+            console.log(data);
+            // displayQuote(data.content);
+            });
+        };
+    });
 };
+
+pullQuote();
