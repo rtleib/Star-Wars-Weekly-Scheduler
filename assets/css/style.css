@@ -2,6 +2,7 @@ body {
   background-image:url(../images/starwars-stars.jpeg);
   background-size: auto;
 }
+
 .weekday-btn{
   background-color:#ffe81f;
   font-size: 28px;
@@ -20,4 +21,84 @@ body {
   color: white;
   transition: all .3s ease-in-out;
   box-shadow: 0 10px 20px 0 rgba(255, 254, 254, 0.945), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* styling for title image */
+.title {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.title img {
+  width: 250px;
+}
+
+.daily-schedule {
+  border: #FFE81F 4px solid;
+  border-radius: 30px;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  height:600px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar {
+  background: silver;
+  opacity: .9;
+}
+
+.current-day {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.today {
+  background-color: #FFE81F;
+  border-radius: 20px;
+}
+
+.hour {
+  background-color: black;
+  color: white;
+  border: 1px dashed #000000;
+  text-align: center;
+  padding-right: 0;
+  font-size: 20px;
+}
+
+.description{
+  white-space: pre-wrap;
+}
+
+.saveBtn {
+  background-color: silver;
+  border: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  width: 95%;
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.saveBtn p {
+  margin-bottom: 0px;
+  color: black;
+}
+
+.saveIcon {
+  width: 40px;
+}
+
+.col-2 {
+  padding-left: 0;
 }
