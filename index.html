@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css">
   <link rel="stylesheet" href="./assets/css/style.css"></link>
   <title>Weekly Schedule</title>
 </head>
 <body>
-  <main class="flex-row row">
+  <main class="columns">
     <!-- left side with weather pane and weekly scheduler -->
-    <div class="col-12 col-md-2">
+    <div class="column is-2">
       <!-- need 7 weekday buttons -->
       <div class="weekday" id="sunday">
         <button class="weekday-btn">Sunday</button>
@@ -37,12 +37,12 @@
     </div>
 
     <!-- middle section with daily 9-5 scdule -->
-    <div class="col-12 col-md-6 col-lg-7">
+    <div class="column is-6">
       <!-- need container for schedule -->
       <div class="daily-schedule">
         <!-- Current Day -->
-        <div class="row current-day">
-          <div class="col-12">
+        <div class="columns current-day">
+          <div class="column is-12">
             <h3 class="today"> Today's Date Here </h3>
           </div>
         </div>
@@ -154,11 +154,11 @@
     </div>
 
     <!-- right section with title in starwars font and API generated quote -->
-    <div class="col-12 col-md-4 col-lg-3">
+    <div class="column is-4">
       <!-- div for title image -->
       <div class="title">
-        <img class="col-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
-        <img class="col-12" src="./assets/images/schedule.png" alt="Daily Schedule written in the Star Wars font">
+        <img class="column is-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
+        <img class="column is-12" src="./assets/images/schedule.png" alt="Daily Schedule written in the Star Wars font">
       </div>
       
 
