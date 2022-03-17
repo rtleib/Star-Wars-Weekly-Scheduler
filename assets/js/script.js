@@ -2,9 +2,6 @@
 
 //function for weather api that refreshes weekly
 
-//function for quote api that changes daily
-
-// curl -X GET "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote" -H "accept: text/plain"
 var quoteContainer = document.getElementById('random-quote');
 
 var pullQuote = function() {
