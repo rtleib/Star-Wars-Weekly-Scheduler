@@ -32,3 +32,8 @@ var displayQuote = function(quote) {
 };
 
 pullQuote();
+
+$(document).ready(function(){
+    $("#date").datepicker({ 
+    });
+});
