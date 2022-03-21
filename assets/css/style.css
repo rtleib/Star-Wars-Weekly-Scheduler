@@ -12,7 +12,7 @@ body {
   width: 100%;
   border: 1px solid black;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 
@@ -21,6 +21,7 @@ body {
   color: white;
   transition: all .3s ease-in-out;
   box-shadow: 0 10px 20px 0 rgba(255, 254, 254, 0.945), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
 /* styling for title image */
@@ -63,6 +64,7 @@ body {
 
 .today {
   background-color: #FFE81F;
+  color: black;
   border-radius: 20px;
   height: 40px;
 }
@@ -110,6 +112,7 @@ body {
 
 .saveIcon {
   width: 40px;
+  color: #ffe81f;
 }
 
 .col-2 {

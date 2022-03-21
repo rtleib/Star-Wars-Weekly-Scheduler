@@ -12,6 +12,7 @@
   <main class="columns is-gapless is-flex">
     <!-- left side with weather pane and weekly scheduler -->
     <div class="column is-2">
+      
       <!-- need 7 weekday buttons -->
       <div class="weekday" id="sunday">
         <button class="weekday-btn">Sunday</button>
@@ -43,7 +44,8 @@
         <!-- Current Day -->
         <div class="columns current-day">
           <div class="column is-12">
-            <h3 class="today" id="today"> </h3>
+            <h3 class="today" id="today"></h3>
+            <input type="date" size="10" value="today" id="date-selector"/>
           </div>
         </div>
         <!-- 9-5 text area tags -->
