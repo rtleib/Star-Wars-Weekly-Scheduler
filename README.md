@@ -6,6 +6,7 @@ This project is work with a group to build an app that solves a real-world probl
 
 Technologies Used
 
+We used GitHub, VS Code, Terminal, Bash, Bulma, OpenWeather API, and Swagger Star Wars Quote API
 
 
 Screenshot
