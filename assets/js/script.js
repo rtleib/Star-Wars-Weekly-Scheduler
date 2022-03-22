@@ -37,6 +37,12 @@ var reload = function(){
 // date format apprearance 
 date.textContent = moment().format('MMMM Do, YYYY');
 
+// date selector
+$(document).ready(function(){
+    $("#date-selector").datepicker({ 
+    });
+});
+
 // save items to schedule
 saveBtnEl.forEach(function(el) {
   el.addEventListener("click", saveText);
@@ -77,3 +83,8 @@ var displayQuote = function(quote) {
 };
 
 pullQuote();
+
+$(document).ready(function(){
+    $("#date").datepicker({ 
+    });
+});
