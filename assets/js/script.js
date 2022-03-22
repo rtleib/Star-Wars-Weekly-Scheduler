@@ -51,7 +51,9 @@ saveBtnEl.forEach(function(el) {
 reload();
 
 
-//function for weather api that refreshes weekly
+// global variables for weekly forecast
+var citySearch = document.querySelector('#city-input');
+var userInput = document.querySelector('#value');
 
 var quoteContainer = document.getElementById('random-quote');
 
@@ -61,10 +63,8 @@ var pullQuote = function() {
 
     // pulls from api to get a random quote
     fetch(quoteUrl).then(function(response) {
-    console.log(response);
         if (response.ok) {
-            response.json().then(function(data) {
-            console.log(data);
+            response.json().then(function(data) {;
             displayQuote(data);
             });
         };
@@ -82,9 +82,70 @@ var displayQuote = function(quote) {
     quoteContainer.appendChild(quoteEl);
 };
 
+
+// listens for submit on form
+var formHandler = function(event) {
+  event.preventDefault();
+
+  var city = citySearch.value.trim();
+
+  if(city) {
+    getCity(city);
+  } 
+  else {
+    alert('City name does not exist');
+  };
+};
+
+// fetches lat and lon from user search for city
+var getCity = function(city) {
+
+  var displayCity = document.querySelector('.city-name');
+  displayCity.textContent = city + ' ';
+
+  var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
+  var cityUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+
+  fetch (cityUrl).then(function(response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        cityWeather(data.coord);
+      });
+    };
+  });
+};
+
+// pulls weather for city based on lat and lon coordinates
+var cityWeather = function(coord) {
+
+  var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
+  var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coord.lat + "&lon=" + coord.lon + "&exclude=minutely,hourly,current&units=imperial&appid=" + APIKey;
+
+  fetch(weatherUrl).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        displayWeather(data.daily);
+      });
+    };
+  });
+};
+
+var displayWeather = function (display) {
+  console.log(display);
+
+  for (property in display) {
+    console.log(property, display[property]);
+  };
+};
+
+userInput.addEventListener('submit', formHandler);
+
+pullQuote();
+=======
 pullQuote();
 
 $(document).ready(function(){
     $("#date").datepicker({ 
     });
 });
+
