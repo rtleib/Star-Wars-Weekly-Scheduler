@@ -1,7 +1,6 @@
 // function for entering information on scheduler and saving to local storage
 // get the current date
 var date = document.getElementById("today");
-var milHours = ["9","10","11","12","13","14","15","16","17"];
 var saveBtnEl = document.querySelectorAll(".saveBtn");
 var currentHour = parseInt(moment().format('HH'));
 
@@ -11,6 +10,88 @@ var quoteContainer = document.getElementById('random-quote');
 // global variables for weekly forecast
 var citySearch = document.querySelector('#city-input');
 var userInput = document.querySelector('#value');
+
+// create array for each day
+var weeklySchedule = [
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+  ];
+  var day;
 
 // save tasks for each hour 
 var saveText = function(){
