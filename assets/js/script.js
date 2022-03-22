@@ -62,10 +62,28 @@ var getCity = function(city) {
     if (response.ok) {
       response.json().then(function (data) {
         console.log(data);
-      })
-    }
-  })
-}
+        cityWeather(data.coord);
+      });
+    };
+  });
+};
+
+// pulls weather for city based on lat and lon coordinates
+var cityWeather = function(coord) {
+  console.log(coord);
+
+  var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
+  var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coord.lat + "&lon=" + coord.lon + "&exclude=minutely,hourly,current&units=imperial&appid=" + APIKey;
+
+  fetch(weatherUrl).then(function (response) {
+    console.log(response);
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+      });
+    };
+  });
+};
 
 userInput.addEventListener('submit', formHandler);
 
