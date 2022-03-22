@@ -55,7 +55,16 @@ var getCity = function(city) {
   var displayCity = document.querySelector('.city-name');
   displayCity.textContent = city + ' ';
 
-  
+  var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
+  var cityUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+
+  fetch (cityUrl).then(function(response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+      })
+    }
+  })
 }
 
 userInput.addEventListener('submit', formHandler);
