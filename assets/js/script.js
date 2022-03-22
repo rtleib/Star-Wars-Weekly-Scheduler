@@ -12,10 +12,8 @@ var pullQuote = function() {
 
     // pulls from api to get a random quote
     fetch(quoteUrl).then(function(response) {
-    console.log(response);
         if (response.ok) {
-            response.json().then(function(data) {
-            console.log(data);
+            response.json().then(function(data) {;
             displayQuote(data);
             });
         };
@@ -36,7 +34,6 @@ var displayQuote = function(quote) {
 // listens for submit on form
 var formHandler = function(event) {
   event.preventDefault();
-  console.log('oh my');
 
   var city = citySearch.value.trim();
 
@@ -50,7 +47,6 @@ var formHandler = function(event) {
 
 // fetches lat and lon from user search for city
 var getCity = function(city) {
-  console.log(city);
 
   var displayCity = document.querySelector('.city-name');
   displayCity.textContent = city + ' ';
@@ -61,7 +57,6 @@ var getCity = function(city) {
   fetch (cityUrl).then(function(response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
         cityWeather(data.coord);
       });
     };
@@ -70,19 +65,21 @@ var getCity = function(city) {
 
 // pulls weather for city based on lat and lon coordinates
 var cityWeather = function(coord) {
-  console.log(coord);
 
   var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
   var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coord.lat + "&lon=" + coord.lon + "&exclude=minutely,hourly,current&units=imperial&appid=" + APIKey;
 
   fetch(weatherUrl).then(function (response) {
-    console.log(response);
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
+        displayWeather(data.daily);
       });
     };
   });
+};
+
+var displayWeather = function (display) {
+  console.log(display);
 };
 
 userInput.addEventListener('submit', formHandler);
