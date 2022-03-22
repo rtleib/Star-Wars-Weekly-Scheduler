@@ -11,7 +11,6 @@
 <body>
   <main class="columns is-gapless is-flex is-mobile">
     <!-- left side with weather pane and weekly scheduler -->
-
     <div class="column is-2" id="day-buttons">
       <!-- need 7 weekday buttons -->
       <div class="weekday" data-day="sunday" id="sunday">
@@ -33,35 +32,6 @@
         <button class="weekday-btn">Friday</button>
       </div>
       <div class="weekday" data-day="saturday" id="saturday">
-    <div class="column is-2">
-
-    <!-- need 7 weekday buttons -->
-     <!-- sunday button -->
-      <div class="weekday" id="sunday">
-        <button class="weekday-btn">Sunday</button>
-      </div>
-      <!-- monday button -->
-      <div class="weekday" id="monday">
-        <button class="weekday-btn">Monday</button>
-      </div>
-      <!-- tuesday button -->
-      <div class="weekday" id="tuesday">
-        <button class="weekday-btn">Tuesday</button>
-      </div>
-      <!-- wednesday button -->
-      <div class="weekday" id="wednesday">
-        <button class="weekday-btn">Wednesday</button>
-      </div>
-      <!-- thursday button -->
-      <div class="weekday" id="thursday">
-        <button class="weekday-btn">Thursday</button>
-      </div>
-      <!-- friday button -->
-      <div class="weekday" id="friday">
-        <button class="weekday-btn">Friday</button>
-      </div>
-      <!-- saturday button -->
-      <div class="weekday" id="saturday">
         <button class="weekday-btn">Saturday</button>
       </div>
     </div>
@@ -73,8 +43,7 @@
         <!-- Current Day -->
         <div class="columns current-day">
           <div class="column is-12">
-            <h3 class="today" id="today"></h3>
-            <input type="date" size="10" value="today" id="date-selector"/>
+            <h3 class="today" id="today"> </h3>
           </div>
         </div>
         <!-- 9-5 text area tags -->
@@ -200,32 +169,6 @@
 
 
   </main>
-
-  <!-- weekly forecast div to show weather for week -->
-  <div class="column is-3">
-    <h2 class="">City:</h2>
- 
-    <form id="value">
-      <input name="city" id="city-input" class="input" type="text" placeholder="City">
-      <button type="submit" class="btn">Search</button>
-  </form>
-  </div>
- 
-  <div class="column is-12 box day-of-forecast">
-               
-    <h2 class="subtitle is-2 city-name"></h2>
- 
-    <div class="columns">
-        <div class="display column is-6">
-            <div class="subtitle is-4 sky-description"></div>
-            <p class="subtitle is-4">
-                Temp: <span id="temp"></span> F <br>
-                Humidity: <span id="humidity"></span>% <br>
-                Wind: <span id="wind"></span>mph <br>
-                UV Index: <span id="uv"></span>
-            </p>
-        </div>
-    </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

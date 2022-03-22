@@ -1,9 +1,9 @@
 /* background image */
 body {
   background-image:url(../images/starwars-stars.jpeg);
-  position: fixed;
+  /* position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100%; */
 }
 
 /*styling weekday bottons */
