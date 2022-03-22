@@ -44,11 +44,6 @@ var reload = function(){
 // date format apprearance 
 date.textContent = moment().format('MMMM Do, YYYY');
 
-// date selector
-$(document).ready(function(){
-    $("#date-selector").datepicker({ 
-    });
-});
 
 // save items to schedule
 saveBtnEl.forEach(function(el) {
@@ -142,7 +137,3 @@ userInput.addEventListener('submit', formHandler);
 
 pullQuote();
 
-$(document).ready(function(){
-    $("#date").datepicker({ 
-    });
-});
