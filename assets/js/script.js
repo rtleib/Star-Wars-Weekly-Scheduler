@@ -106,6 +106,10 @@ var saveText = function() {
     localStorage.setItem('schedule', JSON.stringify(weeklySchedule));
 };
 
+// save items to schedule
+saveBtnEl.forEach(function (el) {
+  el.addEventListener("click", saveText);
+});
 
 // date format apprearance 
 date.textContent = moment().format('MMMM Do, YYYY');
@@ -196,3 +200,100 @@ userInput.addEventListener('submit', formHandler);
 
 pullQuote();
 
+document.getElementById("sunday").addEventListener("click", function () {
+  day = 0;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("monday").addEventListener("click", function () {
+  day = 1;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("tuesday").addEventListener("click", function () {
+  day = 2;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("wednesday").addEventListener("click", function () {
+  day = 3;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("thursday").addEventListener("click", function () {
+  day = 4;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("friday").addEventListener("click", function () {
+  day = 5;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("saturday").addEventListener("click", function () {
+  day = 6;
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
