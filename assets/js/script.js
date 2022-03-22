@@ -51,6 +51,11 @@ var formHandler = function(event) {
 // fetches lat and lon from user search for city
 var getCity = function(city) {
   console.log(city);
+
+  var displayCity = document.querySelector('.city-name');
+  displayCity.textContent = city + ' ';
+
+  
 }
 
 userInput.addEventListener('submit', formHandler);
