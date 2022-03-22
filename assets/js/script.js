@@ -33,10 +33,25 @@ var displayQuote = function(quote) {
     quoteContainer.appendChild(quoteEl);
 };
 
+// listens for submit on form
 var formHandler = function(event) {
   event.preventDefault();
   console.log('oh my');
+
+  var city = citySearch.value.trim();
+
+  if(city) {
+    getCity(city);
+  } 
+  else {
+    alert('City name does not exist');
+  };
 };
+
+// fetches lat and lon from user search for city
+var getCity = function(city) {
+  console.log(city);
+}
 
 userInput.addEventListener('submit', formHandler);
 
