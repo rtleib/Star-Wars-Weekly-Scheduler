@@ -80,6 +80,10 @@ var cityWeather = function(coord) {
 
 var displayWeather = function (display) {
   console.log(display);
+
+  for (property in display) {
+    console.log(property, display[property]);
+  };
 };
 
 userInput.addEventListener('submit', formHandler);
