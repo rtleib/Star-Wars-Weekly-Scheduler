@@ -5,6 +5,13 @@ var milHours = ["9","10","11","12","13","14","15","16","17"];
 var saveBtnEl = document.querySelectorAll(".saveBtn");
 var currentHour = parseInt(moment().format('HH'));
 
+// global variable for displaying quote to html
+var quoteContainer = document.getElementById('random-quote');
+
+// global variables for weekly forecast
+var citySearch = document.querySelector('#city-input');
+var userInput = document.querySelector('#value');
+
 // save tasks for each hour 
 var saveText = function(){
   var hour = this.parentElement.parentElement.dataset.hour;
@@ -49,13 +56,6 @@ saveBtnEl.forEach(function(el) {
 });
 
 reload();
-
-
-// global variables for weekly forecast
-var citySearch = document.querySelector('#city-input');
-var userInput = document.querySelector('#value');
-
-var quoteContainer = document.getElementById('random-quote');
 
 var pullQuote = function() {
     
@@ -141,11 +141,8 @@ var displayWeather = function (display) {
 userInput.addEventListener('submit', formHandler);
 
 pullQuote();
-=======
-pullQuote();
 
 $(document).ready(function(){
     $("#date").datepicker({ 
     });
 });
-
