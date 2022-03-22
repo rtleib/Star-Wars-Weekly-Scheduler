@@ -1,6 +1,10 @@
 body {
   background-image:url(../images/starwars-stars.jpeg);
-  background-size:contain;
+  /* background-size:contain; */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .weekday-btn{
