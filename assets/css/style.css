@@ -18,6 +18,7 @@ body {
   margin-top: 15px;
   margin-bottom: 20px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 /* hover for weekday bottons */
