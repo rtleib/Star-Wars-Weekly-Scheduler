@@ -91,47 +91,25 @@ var weeklySchedule = [
       fivePm: "",
     },
   ];
-  var day;
+var day;
 
-// save tasks for each hour 
-var saveText = function(){
-  var hour = this.parentElement.parentElement.dataset.hour;
-  var value = this.parentElement.previousElementSibling.value;
-  console.log (hour);
-  console.log(value);
-  localStorage.setItem(hour, value);
+// loads page with saved items in local storage
+if (localStorage.getItem('schedule') !== null) {
+    weeklySchedule = JSON.parse(localStorage.getItem('schedule'));
 };
 
-//reload tasks on reload
-var reload = function(){
-  milHours.forEach(function(hour){
-    //get items from localStorage
-    var timeBlock = document.querySelector(`[data-hour="${hour}"] textarea`);
-    timeBlock.value = localStorage.getItem(hour);
-    //set color coding by hour
-    if (parseInt(hour) > currentHour) {
-      timeBlock.classList.add("future")
-    } else if (parseInt(hour) === currentHour){
-      timeBlock.classList.add("present")
-    } else if (parseInt(hour) < currentHour) {
-      timeBlock.classList.add("past")
-    }
-    console.log(hour, typeof parseInt(hour));
-    console.log(currentHour, typeof currentHour);
-  });
-
+// save tasks for each hour
+var saveText = function() {
+    var hour = this.parentElement.parentElement.dataset.hour;
+    var value = this.parentElement.previousElementSibling.value;
+    weeklySchedule[day][hour] = value;
+    localStorage.setItem('schedule', JSON.stringify(weeklySchedule));
 };
+
 
 // date format apprearance 
 date.textContent = moment().format('MMMM Do, YYYY');
 
-
-// save items to schedule
-saveBtnEl.forEach(function(el) {
-  el.addEventListener("click", saveText);
-});
-
-reload();
 
 var pullQuote = function() {
     

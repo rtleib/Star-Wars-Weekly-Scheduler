@@ -12,21 +12,21 @@
 </head>
 
 <body>
-  <main class="columns is-gapless is-flex">
+  <main class="columns is-gapless is-flex is-mobile">
     <!-- left side with weather pane and weekly scheduler -->
     <div class="column is-2">
 
       <!-- need 7 weekday buttons -->
       <!-- sunday button -->
-      <div class="weekday" id="sunday">
+      <div class="weekday" data-day="sunday" id="sunday">
         <button class="weekday-btn">Sunday</button>
       </div>
       <!-- monday button -->
-      <div class="weekday" id="monday">
+      <div class="weekday" data-day="monday" id="monday">
         <button class="weekday-btn">Monday</button>
       </div>
       <!-- tuesday button -->
-      <div class="weekday" id="tuesday">
+      <div class="weekday" data-day="tuesday" id="tuesday">
         <button class="weekday-btn">Tuesday</button>
       </div>
       <!-- wednesday button -->
@@ -207,7 +207,7 @@
       </div>
     </div>
   </div>
-  
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
