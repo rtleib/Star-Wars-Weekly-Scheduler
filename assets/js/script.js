@@ -40,4 +40,3 @@ var getWeatherInfo = function() {
 };
 
 pullQuote();
-getWeatherInfo();
