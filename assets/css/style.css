@@ -17,6 +17,7 @@ body {
   border: 1px solid black;
   margin-top: 15px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 /* hover for weekday bottons */
@@ -25,7 +26,6 @@ body {
   color: white;
   transition: all .3s ease-in-out;
   box-shadow: 0 10px 20px 0 rgba(255, 254, 254, 0.945), 0 17px 50px 0 rgba(0,0,0,0.19);
-  cursor: pointer;
 }
 
 /* styling for title image */
