@@ -9,28 +9,36 @@
   <title>Weekly Schedule</title>
 </head>
 <body>
-  <main class="columns">
+  <main class="columns is-gapless is-flex">
     <!-- left side with weather pane and weekly scheduler -->
     <div class="column is-2">
-      <!-- need 7 weekday buttons -->
+
+    <!-- need 7 weekday buttons -->
+     <!-- sunday button -->
       <div class="weekday" id="sunday">
         <button class="weekday-btn">Sunday</button>
       </div>
+      <!-- monday button -->
       <div class="weekday" id="monday">
         <button class="weekday-btn">Monday</button>
       </div>
+      <!-- tuesday button -->
       <div class="weekday" id="tuesday">
         <button class="weekday-btn">Tuesday</button>
       </div>
+      <!-- wednesday button -->
       <div class="weekday" id="wednesday">
         <button class="weekday-btn">Wednesday</button>
       </div>
+      <!-- thursday button -->
       <div class="weekday" id="thursday">
         <button class="weekday-btn">Thursday</button>
       </div>
+      <!-- friday button -->
       <div class="weekday" id="friday">
         <button class="weekday-btn">Friday</button>
       </div>
+      <!-- saturday button -->
       <div class="weekday" id="saturday">
         <button class="weekday-btn">Saturday</button>
       </div>
@@ -43,15 +51,16 @@
         <!-- Current Day -->
         <div class="columns current-day">
           <div class="column is-12">
-            <h3 class="today"> Today's Date Here </h3>
+            <h3 class="today" id="today"></h3>
+            <input type="date" size="10" value="today" id="date-selector"/>
           </div>
         </div>
         <!-- 9-5 text area tags -->
         <!-- 9am -->
-        <div class="row time-block" data-hour="9">
-          <div class="col-2 hour">9am</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="9">
+          <div class="column is-2 hour">9am</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -59,10 +68,10 @@
           </div>
         </div>
         <!-- 10am -->
-        <div class="row time-block" data-hour="10">
-          <div class="col-2 hour">10am</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="10">
+          <div class="column is-2 hour">10am</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -70,10 +79,10 @@
           </div>
         </div>
         <!-- 11am -->
-        <div class="row time-block" data-hour="11">
-          <div class="col-2 hour">11am</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="11">
+          <div class="column is-2 hour">11am</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -81,10 +90,10 @@
           </div>
         </div>
         <!-- 12pm -->
-        <div class="row time-block" data-hour="12">
-          <div class="col-2 hour">12pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="12">
+          <div class="column is-2 hour">12pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -92,10 +101,10 @@
           </div>
         </div>
         <!-- 1pm -->
-        <div class="row time-block" data-hour="13">
-          <div class="col-2 hour">1pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="13">
+          <div class="column is-2 hour">1pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -103,10 +112,10 @@
           </div>
         </div>
         <!-- 2pm -->
-        <div class="row time-block" data-hour="14">
-          <div class="col-2 hour">2pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="14">
+          <div class="column is-2 hour">2pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -114,10 +123,10 @@
           </div>
         </div>
         <!-- 3pm -->
-        <div class="row time-block" data-hour="15">
-          <div class="col-2 hour">3pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="15">
+          <div class="column is-2 hour">3pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -125,10 +134,10 @@
           </div>
         </div>
         <!-- 4pm -->
-        <div class="row time-block" data-hour="16">
-          <div class="col-2 hour">4pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="16">
+          <div class="column is-2 hour">4pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -136,10 +145,10 @@
           </div>
         </div>
         <!-- 5pm -->
-        <div class="row time-block" data-hour="17">
-          <div class="col-2 hour">5pm</div>
-          <textarea class="col-8 description"></textarea>
-          <div class="col-2">
+        <div class="columns is-gapless time-block" data-hour="17">
+          <div class="column is-2 hour">5pm</div>
+          <textarea class="column is-8 description"></textarea>
+          <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p> 
@@ -197,6 +206,7 @@
     </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
