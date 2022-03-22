@@ -57,8 +57,7 @@ body {
 
 /* styling for scrollbar */
 ::-webkit-scrollbar {
-  background: silver;
-  opacity: .9;
+  display: none;
 }
 
 /* styling for current day */
