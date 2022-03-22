@@ -1,8 +1,8 @@
 // function for entering information on scheduler and saving to local storage
 
-//function for weather api that refreshes weekly
-// api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+// global variables for weekly forecast
+var citySearch = document.querySelector('#city-input');
+var userInput = document.querySelector('#value');
 
 var quoteContainer = document.getElementById('random-quote');
 
@@ -33,10 +33,11 @@ var displayQuote = function(quote) {
     quoteContainer.appendChild(quoteEl);
 };
 
-var getWeatherInfo = function() {
-    console.log('this functions works');
-
-    // var weatherUrl = "api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=28a7fce4f20896b97ae391942a7e9c8d";
+var formHandler = function(event) {
+  event.preventDefault();
+  console.log('oh my');
 };
+
+userInput.addEventListener('submit', formHandler);
 
 pullQuote();
