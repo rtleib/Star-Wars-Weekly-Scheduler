@@ -1,8 +1,4 @@
-// function for entering information on scheduler and saving to local storage
-// get the current date
-var date = document.getElementById("today");
 var saveBtnEl = document.querySelectorAll(".saveBtn");
-var currentHour = parseInt(moment().format('HH'));
 
 // global variable for displaying quote to html
 var quoteContainer = document.getElementById('random-quote');
@@ -111,10 +107,6 @@ saveBtnEl.forEach(function (el) {
   el.addEventListener("click", saveText);
 });
 
-// date format apprearance 
-date.textContent = moment().format('MMMM Do, YYYY');
-
-
 var pullQuote = function() {
     
     var quoteUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
@@ -190,7 +182,6 @@ var cityWeather = function(coord) {
 
 var displayWeather = function (display) {
   console.log(display);
-
   for (property in display) {
     console.log(property, display[property]);
   };
@@ -202,6 +193,8 @@ pullQuote();
 
 document.getElementById("sunday").addEventListener("click", function () {
   day = 0;
+  var day = document.querySelector(".today");
+  day.textContent = "Sunday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -216,6 +209,8 @@ document.getElementById("sunday").addEventListener("click", function () {
 
 document.getElementById("monday").addEventListener("click", function () {
   day = 1;
+  var day = document.querySelector(".today");
+  day.textContent = "Monday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -230,6 +225,8 @@ document.getElementById("monday").addEventListener("click", function () {
 
 document.getElementById("tuesday").addEventListener("click", function () {
   day = 2;
+  var day = document.querySelector(".today");
+  day.textContent = "Tuesday"
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -244,6 +241,8 @@ document.getElementById("tuesday").addEventListener("click", function () {
 
 document.getElementById("wednesday").addEventListener("click", function () {
   day = 3;
+  var day = document.querySelector(".today");
+  day.textContent = "Wednesday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -258,6 +257,8 @@ document.getElementById("wednesday").addEventListener("click", function () {
 
 document.getElementById("thursday").addEventListener("click", function () {
   day = 4;
+  var day = document.querySelector(".today");
+  day.textContent = "Thursday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -272,6 +273,8 @@ document.getElementById("thursday").addEventListener("click", function () {
 
 document.getElementById("friday").addEventListener("click", function () {
   day = 5;
+  var day = document.querySelector(".today");
+  day.textContent = "Friday"
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -286,6 +289,8 @@ document.getElementById("friday").addEventListener("click", function () {
 
 document.getElementById("saturday").addEventListener("click", function () {
   day = 6;
+  var day = document.querySelector(".today");
+  day.textContent = "Saturday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
