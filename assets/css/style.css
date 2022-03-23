@@ -76,7 +76,8 @@ body {
   background-color: #FFE81F;
   color: black;
   border-radius: 20px;
-  height: 50px;
+  height:fit-content;
+  padding: 0;
 }
 
 /* styling for hours in daily schedule */
@@ -93,7 +94,7 @@ body {
 .description{
   white-space: pre-wrap;
   font-size: 22px;
-  /* need to choose and insert font family */
+  font-family: 'Titillium Web', sans-serif;
 }
 
 /* styling for save button in daily schedule */
@@ -149,4 +150,11 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+.day-of-week{
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

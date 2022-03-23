@@ -193,8 +193,8 @@ pullQuote();
 
 document.getElementById("sunday").addEventListener("click", function () {
   day = 0;
-  var day = document.querySelector(".today");
-  day.textContent = "Sunday" 
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Sunday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -209,8 +209,8 @@ document.getElementById("sunday").addEventListener("click", function () {
 
 document.getElementById("monday").addEventListener("click", function () {
   day = 1;
-  var day = document.querySelector(".today");
-  day.textContent = "Monday" 
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Monday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -225,8 +225,8 @@ document.getElementById("monday").addEventListener("click", function () {
 
 document.getElementById("tuesday").addEventListener("click", function () {
   day = 2;
-  var day = document.querySelector(".today");
-  day.textContent = "Tuesday"
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Tuesday"
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -241,8 +241,8 @@ document.getElementById("tuesday").addEventListener("click", function () {
 
 document.getElementById("wednesday").addEventListener("click", function () {
   day = 3;
-  var day = document.querySelector(".today");
-  day.textContent = "Wednesday" 
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Wednesday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -257,8 +257,8 @@ document.getElementById("wednesday").addEventListener("click", function () {
 
 document.getElementById("thursday").addEventListener("click", function () {
   day = 4;
-  var day = document.querySelector(".today");
-  day.textContent = "Thursday" 
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Thursday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -273,8 +273,8 @@ document.getElementById("thursday").addEventListener("click", function () {
 
 document.getElementById("friday").addEventListener("click", function () {
   day = 5;
-  var day = document.querySelector(".today");
-  day.textContent = "Friday"
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Friday"
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
@@ -289,8 +289,8 @@ document.getElementById("friday").addEventListener("click", function () {
 
 document.getElementById("saturday").addEventListener("click", function () {
   day = 6;
-  var day = document.querySelector(".today");
-  day.textContent = "Saturday" 
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Saturday" 
   var textDescriptions = document.querySelectorAll(".description");
   var position = 0;
   var display = document.querySelector("#display");
