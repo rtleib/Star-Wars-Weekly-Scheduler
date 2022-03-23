@@ -1,6 +1,7 @@
 /* background image */
 body {
   background-image:url(../images/starwars-stars.jpeg);
+  position:absolute;
   width: 100%;
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
@@ -146,6 +147,7 @@ textarea{
   float: left;
 }
 
+/* styling for weather box */
 .box{
   box-shadow: 0 0 2em white;
   border-radius: 15px;
@@ -153,10 +155,16 @@ textarea{
   margin: -200;
 }
 
+.weather-display{
+  font-size: 20px;
+}
+
+/* styling for input box */
 .input{
   font-family: 'Titillium Web', sans-serif;
 }
 
+/* styling for search button */
 .searchBtn{
   background-color:#ffe81f;
   font-size: 20px;
@@ -168,6 +176,7 @@ textarea{
   padding: 6px 40px;
 }
 
+/* hover for search button */
 .searchBtn:hover {
   background-color: #ffe81f;
   color: white;
@@ -179,6 +188,7 @@ textarea{
   visibility: hidden;
 }
 
+/* style for days of the week */
 .day-of-week{
   font-size: 40px;
   text-align: center;
