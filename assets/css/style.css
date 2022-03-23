@@ -98,6 +98,7 @@ body {
 /* styling for save button in daily schedule */
 .saveBtn {
   background-color: silver;
+  font-family: 'Titillium Web', sans-serif;
   border: 1px solid black;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
