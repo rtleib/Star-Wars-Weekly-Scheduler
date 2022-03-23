@@ -195,3 +195,26 @@ textarea{
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (max-width:575px) {
+  .weekday-btn{
+    padding: 5px;
+    margin: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .weekday-btns{
+    padding: 0;
+    margin: 10px;
+
+  }
+  .weekday {
+    padding: 3px;
+  }
+  .saveIcon {
+  width: 10px;
+  }
+  #today {
+    font-size: 20px;
+  }
+}
