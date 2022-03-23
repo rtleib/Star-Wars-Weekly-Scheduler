@@ -140,5 +140,8 @@ body {
 }
 
 .day-of-forecast{
-
+  box-shadow: 0 0 2em white;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.418);
+  margin: -200;
 }

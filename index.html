@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css"></link>
-  <title>Weekly Schedule</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  </link>
+  <title>Star Wars Weekly Scheduler</title>
 </head>
+
 <body>
-  <main class="columns is-gapless is-flex">
+  <main class="columns is-gapless is-flex is-mobile">
     <!-- left side with weather pane and weekly scheduler -->
     <div class="column is-2">
 
-    <!-- need 7 weekday buttons -->
-     <!-- sunday button -->
-      <div class="weekday" id="sunday">
+      <!-- need 7 weekday buttons -->
+      <!-- sunday button -->
+      <div class="weekday" data-day="sunday" id="sunday">
         <button class="weekday-btn">Sunday</button>
       </div>
       <!-- monday button -->
-      <div class="weekday" id="monday">
+      <div class="weekday" data-day="monday" id="monday">
         <button class="weekday-btn">Monday</button>
       </div>
       <!-- tuesday button -->
-      <div class="weekday" id="tuesday">
+      <div class="weekday" data-day="tuesday" id="tuesday">
         <button class="weekday-btn">Tuesday</button>
       </div>
       <!-- wednesday button -->
-      <div class="weekday" id="wednesday">
+      <div class="weekday" data-day="wednesday" id="wednesday">
         <button class="weekday-btn">Wednesday</button>
       </div>
       <!-- thursday button -->
-      <div class="weekday" id="thursday">
+      <div class="weekday" data-day="thursday" id="thursday">
         <button class="weekday-btn">Thursday</button>
       </div>
       <!-- friday button -->
-      <div class="weekday" id="friday">
+      <div class="weekday" data-day="friday" id="friday">
         <button class="weekday-btn">Friday</button>
       </div>
       <!-- saturday button -->
-      <div class="weekday" id="saturday">
+      <div class="weekday" data-day="saturday" id="saturday">
         <button class="weekday-btn">Saturday</button>
       </div>
     </div>
@@ -47,7 +50,7 @@
     <!-- middle section with daily 9-5 scdule -->
     <div class="column is-6">
       <!-- need container for schedule -->
-      <div class="daily-schedule">
+      <div id="display" class="hidden daily-schedule">
         <!-- Current Day -->
         <div class="columns current-day">
           <div class="column is-12">
@@ -56,108 +59,108 @@
         </div>
         <!-- 9-5 text area tags -->
         <!-- 9am -->
-        <div class="columns is-gapless time-block" data-hour="9">
+        <div class="columns is-gapless time-block" data-hour="nineAm">
           <div class="column is-2 hour">9am</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-nineAm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 10am -->
-        <div class="columns is-gapless time-block" data-hour="10">
+        <div class="columns is-gapless time-block" data-hour="tenAm">
           <div class="column is-2 hour">10am</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-tenAm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 11am -->
-        <div class="columns is-gapless time-block" data-hour="11">
+        <div class="columns is-gapless time-block" data-hour="elevenAm">
           <div class="column is-2 hour">11am</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-elevenAm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 12pm -->
-        <div class="columns is-gapless time-block" data-hour="12">
+        <div class="columns is-gapless time-block" data-hour="twelvePm">
           <div class="column is-2 hour">12pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-twelvePm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 1pm -->
-        <div class="columns is-gapless time-block" data-hour="13">
+        <div class="columns is-gapless time-block" data-hour="onePm">
           <div class="column is-2 hour">1pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-onePm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 2pm -->
-        <div class="columns is-gapless time-block" data-hour="14">
+        <div class="columns is-gapless time-block" data-hour="twoPm">
           <div class="column is-2 hour">2pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" data-day="textarea-twoPm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 3pm -->
-        <div class="columns is-gapless time-block" data-hour="15">
+        <div class="columns is-gapless time-block" data-hour="threePm">
           <div class="column is-2 hour">3pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-threePm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 4pm -->
-        <div class="columns is-gapless time-block" data-hour="16">
+        <div class="columns is-gapless time-block" data-hour="fourPm">
           <div class="column is-2 hour">4pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" id="textarea-fourPm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
         <!-- 5pm -->
-        <div class="columns is-gapless time-block" data-hour="17">
+        <div class="columns is-gapless time-block" data-hour="fivePm">
           <div class="column is-2 hour">5pm</div>
-          <textarea class="column is-8 description"></textarea>
+          <textarea class="column is-8 description" if="textarea-fivePm"></textarea>
           <div class="column is-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
       </div>
 
 
-      
+
 
     </div>
 
@@ -168,7 +171,7 @@
         <img class="column is-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
         <img class="column is-12" src="./assets/images/schedule.png" alt="Daily Schedule written in the Star Wars font">
       </div>
-      
+
 
       <!-- need div for quote -->
       <div class="quote" id="random-quote"></div>
@@ -181,31 +184,33 @@
   <!-- weekly forecast div to show weather for week -->
   <div class="column is-3">
     <h2 class="">City:</h2>
- 
+
     <form id="value">
       <input name="city" id="city-input" class="input" type="text" placeholder="City">
       <button type="submit" class="btn">Search</button>
-  </form>
+    </form>
   </div>
  
   <div class="column is-10 box day-of-forecast">
                
     <h2 class="subtitle is-2 city-name"></h2>
- 
-    <div class="columns">
-        <div class="display column is-6">
-            <div class="subtitle is-4 sky-description"></div>
-            <p class="subtitle is-4">
-                Temp: <span id="temp"></span> F <br>
-                Humidity: <span id="humidity"></span>% <br>
-                Wind: <span id="wind"></span>mph <br>
-                UV Index: <span id="uv"></span>
-            </p>
-        </div>
-    </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+    <div class="columns">
+      <div class="display column is-6">
+        <div class="subtitle is-4 sky-description"></div>
+        <p class="subtitle is-4">
+          Temp: <span id="temp"></span> F <br>
+          Humidity: <span id="humidity"></span>% <br>
+          Wind: <span id="wind"></span>mph <br>
+          UV Index: <span id="uv"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
