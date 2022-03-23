@@ -13,43 +13,45 @@
 </head>
 
 <body>
-  <main class="columns is-flex is-mobile">
-    <!-- left side with weather pane and weekly scheduler -->
-    <div class="column is-2">
+  <main class="columns is-mobile is-multiline">
+    <!-- left side with weekday buttons -->
+    <div class="column is-2-desktop is-12-mobile ">
 
       <!-- need 7 weekday buttons -->
-      <!-- sunday button -->
-      <div class="weekday" data-day="sunday" id="sunday">
-        <button class="weekday-btn">Sunday</button>
-      </div>
-      <!-- monday button -->
-      <div class="weekday" data-day="monday" id="monday">
-        <button class="weekday-btn">Monday</button>
-      </div>
-      <!-- tuesday button -->
-      <div class="weekday" data-day="tuesday" id="tuesday">
-        <button class="weekday-btn">Tuesday</button>
-      </div>
-      <!-- wednesday button -->
-      <div class="weekday" data-day="wednesday" id="wednesday">
-        <button class="weekday-btn">Wednesday</button>
-      </div>
-      <!-- thursday button -->
-      <div class="weekday" data-day="thursday" id="thursday">
-        <button class="weekday-btn">Thursday</button>
-      </div>
-      <!-- friday button -->
-      <div class="weekday" data-day="friday" id="friday">
-        <button class="weekday-btn">Friday</button>
-      </div>
-      <!-- saturday button -->
-      <div class="weekday" data-day="saturday" id="saturday">
-        <button class="weekday-btn">Saturday</button>
+      <div class="weekday-btns columns is-mobile is-multiline">
+        <!-- sunday button -->
+        <div class="weekday column is-3-mobile" data-day="sunday" id="sunday">
+          <button class="weekday-btn is-size-7-mobile">Sunday</button>
+        </div>
+        <!-- monday button -->
+        <div class="weekday column is-3-mobile" data-day="monday" id="monday">
+          <button class="weekday-btn is-size-7-mobile">Monday</button>
+        </div>
+        <!-- tuesday button -->
+        <div class="weekday column is-3-mobile" data-day="tuesday" id="tuesday">
+          <button class="weekday-btn is-size-7-mobile">Tuesday</button>
+        </div>
+        <!-- wednesday button -->
+        <div class="weekday column is-3-mobile" data-day="wednesday" id="wednesday">
+          <button class="weekday-btn is-size-7-mobile">Wednesday</button>
+        </div>
+        <!-- thursday button -->
+        <div class="weekday  column is-3-mobile" data-day="thursday" id="thursday">
+          <button class="weekday-btn is-size-7-mobile">Thursday</button>
+        </div>
+        <!-- friday button -->
+        <div class="weekday column is-3-mobile" data-day="friday" id="friday">
+          <button class="weekday-btn is-size-7-mobile">Friday</button>
+        </div>
+        <!-- saturday button -->
+        <div class="weekday column is-3-mobile" data-day="saturday" id="saturday">
+          <button class="weekday-btn is-size-7-mobile">Saturday</button>
+        </div>
       </div>
     </div>
 
     <!-- middle section with daily 9-5 scdule -->
-    <div class="column is-6">
+    <div class="column is-6-desktop is-12-mobile">
       <!-- need container for schedule -->
       <div id="display" class="hidden daily-schedule">
         <!-- Current Day -->
@@ -61,9 +63,9 @@
         <!-- 9-5 text area tags -->
         <!-- 9am -->
         <div class="columns is-gapless time-block" data-hour="nineAm">
-          <div class="column is-2 hour">9am</div>
-          <textarea class="column is-8 description" id="textarea-nineAm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">9am</div>
+          <textarea class="column is-8-desktop is-5-mobile description" id="textarea-nineAm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -72,9 +74,9 @@
         </div>
         <!-- 10am -->
         <div class="columns is-gapless time-block" data-hour="tenAm">
-          <div class="column is-2 hour">10am</div>
-          <textarea class="column is-8 description" id="textarea-tenAm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">10am</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-tenAm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -83,9 +85,9 @@
         </div>
         <!-- 11am -->
         <div class="columns is-gapless time-block" data-hour="elevenAm">
-          <div class="column is-2 hour">11am</div>
-          <textarea class="column is-8 description" id="textarea-elevenAm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">11am</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-elevenAm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -94,9 +96,9 @@
         </div>
         <!-- 12pm -->
         <div class="columns is-gapless time-block" data-hour="twelvePm">
-          <div class="column is-2 hour">12pm</div>
-          <textarea class="column is-8 description" id="textarea-twelvePm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">12pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-twelvePm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -105,9 +107,9 @@
         </div>
         <!-- 1pm -->
         <div class="columns is-gapless time-block" data-hour="onePm">
-          <div class="column is-2 hour">1pm</div>
-          <textarea class="column is-8 description" id="textarea-onePm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">1pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-onePm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -116,9 +118,9 @@
         </div>
         <!-- 2pm -->
         <div class="columns is-gapless time-block" data-hour="twoPm">
-          <div class="column is-2 hour">2pm</div>
-          <textarea class="column is-8 description" data-day="textarea-twoPm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">2pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" data-day="textarea-twoPm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -127,9 +129,9 @@
         </div>
         <!-- 3pm -->
         <div class="columns is-gapless time-block" data-hour="threePm">
-          <div class="column is-2 hour">3pm</div>
-          <textarea class="column is-8 description" id="textarea-threePm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">3pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-threePm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -138,9 +140,9 @@
         </div>
         <!-- 4pm -->
         <div class="columns is-gapless time-block" data-hour="fourPm">
-          <div class="column is-2 hour">4pm</div>
-          <textarea class="column is-8 description" id="textarea-fourPm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">4pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" id="textarea-fourPm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -149,9 +151,9 @@
         </div>
         <!-- 5pm -->
         <div class="columns is-gapless time-block" data-hour="fivePm">
-          <div class="column is-2 hour">5pm</div>
-          <textarea class="column is-8 description" if="textarea-fivePm"></textarea>
-          <div class="column is-2">
+          <div class="column is-2-desktop is-3-mobile hour is-size-7-mobile">5pm</div>
+          <textarea class="column is-8-desktop is-6-mobile description" if="textarea-fivePm"></textarea>
+          <div class="column is-2-desktop is-3-mobile">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
               <p>Save</p>
@@ -166,7 +168,7 @@
     </div>
 
     <!-- right section with title in starwars font and API generated quote -->
-    <div class="column is-4">
+    <div class="column is-4-desktop is-half-mobile">
       <!-- div for title image -->
       <div class="title">
         <img class="column is-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
