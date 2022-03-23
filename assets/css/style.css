@@ -55,6 +55,10 @@ body {
   overflow-x:hidden;
 }
 
+textarea{
+  resize: none;
+}
+
 /* styling for scrollbar */
 ::-webkit-scrollbar {
   display: none;
@@ -139,6 +143,7 @@ body {
   padding-left: 25px;
   box-shadow: 0px 4px #ffe81f, 0 0 2em white;
   border-radius: 15px;
+  float: left;
 }
 
 .day-of-forecast{
