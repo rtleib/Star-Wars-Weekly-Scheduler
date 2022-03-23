@@ -98,6 +98,7 @@ body {
 /* styling for save button in daily schedule */
 .saveBtn {
   background-color: silver;
+  font-family: 'Titillium Web', sans-serif;
   border: 1px solid black;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -146,15 +147,19 @@ body {
   margin: -200;
 }
 
+.input{
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .searchBtn{
   background-color:#ffe81f;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   margin-top: 20px;
   cursor: pointer;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  padding: 14px 40px;
+  padding: 6px 40px;
 }
 
 .searchBtn:hover {
