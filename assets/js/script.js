@@ -83,6 +83,7 @@ var displayWeather = function (display) {
 
   for (property in display) {
     console.log(property, display[property]);
+    
   };
 };
 
