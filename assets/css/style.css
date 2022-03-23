@@ -1,24 +1,24 @@
 /* background image */
 body {
   background-image:url(../images/starwars-stars.jpeg);
-  position: fixed;
+  position:absolute;
   width: 100%;
   height: 100%;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 /*styling weekday bottons */
 .weekday-btn{
   background-color:#ffe81f;
   font-size: 23px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   padding: 14px 40px;
-  border-radius: 2px;
   width: 100%;
   border: 1px solid black;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 6px;
   cursor: pointer;
-  border-radius: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 /* hover for weekday bottons */
@@ -55,6 +55,10 @@ body {
   overflow-x:hidden;
 }
 
+textarea{
+  resize: none;
+}
+
 /* styling for scrollbar */
 ::-webkit-scrollbar {
   display: none;
@@ -75,7 +79,8 @@ body {
   background-color: #FFE81F;
   color: black;
   border-radius: 20px;
-  height: 40px;
+  height:fit-content;
+  padding: 0;
 }
 
 /* styling for hours in daily schedule */
@@ -92,15 +97,16 @@ body {
 .description{
   white-space: pre-wrap;
   font-size: 22px;
-  /* need to choose and insert font family */
+  font-family: 'Titillium Web', sans-serif;
 }
 
 /* styling for save button in daily schedule */
 .saveBtn {
   background-color: silver;
+  font-family: 'Titillium Web', sans-serif;
   border: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
   color: white;
   width: 95%;
   padding: 5px; 
@@ -137,9 +143,107 @@ body {
   padding-left: 25px;
   box-shadow: 0px 4px #ffe81f, 0 0 2em white;
   border-radius: 15px;
+  float: left;
 }
 
-.day-of-forecast{
-  box-shadow: 0px 4px #ffe81f, 0 0 2em white;
+/* styling for weather box */
+.box{
+  box-shadow: 0 0 2em white;
   border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: -200;
+}
+
+.weather-display{
+  font-size: 20px;
+}
+
+/* styling for input box */
+.input{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* styling for search button */
+.searchBtn{
+  background-color:#ffe81f;
+  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 6px 40px;
+}
+
+/* hover for search button */
+.searchBtn:hover {
+  background-color: #ffe81f;
+  color: white;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 10px 20px 0 rgba(255, 254, 254, 0.945), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* style for days of the week */
+.day-of-week{
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width:768px) {
+  .weekday-btns{
+    padding: 0;
+    margin: 20px;
+  }
+
+  .weekday-btn{
+    padding: 5px;
+    margin: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .title img {
+    display: none;
+  } 
+  .time-block{
+    align-items: center;
+    align-content: center;
+  }
+  .saveBtn{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin: 10px;
+  }
+  textarea {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width:575px) {
+  .weekday-btns{
+    padding: 0;
+    margin: 10px;
+  }
+  .weekday {
+    padding: 3px;
+  }
+  .saveIcon {
+  width: 20px;
+  }
+  #today {
+    font-size: 20px;
+  }
+  .daily-schedule {
+    height: 400px;
+  }
+  .saveBtn {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
