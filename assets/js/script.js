@@ -1,10 +1,111 @@
-// function for entering information on scheduler and saving to local storage
+var saveBtnEl = document.querySelectorAll(".saveBtn");
+
+// global variable for displaying quote to html
+var quoteContainer = document.getElementById('random-quote');
 
 // global variables for weekly forecast
 var citySearch = document.querySelector('#city-input');
 var userInput = document.querySelector('#value');
 
-var quoteContainer = document.getElementById('random-quote');
+// create array for each day
+var weeklySchedule = [
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+    {
+      nineAm: "",
+      tenAm: "",
+      elevenAm: "",
+      twelvePm: "",
+      onePm: "",
+      twoPm: "",
+      threePm: "",
+      fourPm: "",
+      fivePm: "",
+    },
+  ];
+var day;
+
+// loads page with saved items in local storage
+if (localStorage.getItem('schedule') !== null) {
+    weeklySchedule = JSON.parse(localStorage.getItem('schedule'));
+};
+
+// save tasks for each hour
+var saveText = function() {
+    var hour = this.parentElement.parentElement.dataset.hour;
+    var value = this.parentElement.previousElementSibling.value;
+    weeklySchedule[day][hour] = value;
+    localStorage.setItem('schedule', JSON.stringify(weeklySchedule));
+};
+
+// save items to schedule
+saveBtnEl.forEach(function (el) {
+  el.addEventListener("click", saveText);
+});
 
 var pullQuote = function() {
     
@@ -30,6 +131,7 @@ var displayQuote = function(quote) {
     // append to container
     quoteContainer.appendChild(quoteEl);
 };
+
 
 // listens for submit on form
 var formHandler = function(event) {
@@ -107,6 +209,125 @@ var cityWeather = function(coord) {
   });
 };
 
+var displayWeather = function (display) {
+  console.log(display);
+  for (property in display) {
+    console.log(property, display[property]);
+  };
+};
+
 userInput.addEventListener('submit', formHandler);
 
 pullQuote();
+
+document.getElementById("sunday").addEventListener("click", function () {
+  day = 0;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Sunday" 
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("monday").addEventListener("click", function () {
+  day = 1;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Monday" 
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("tuesday").addEventListener("click", function () {
+  day = 2;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Tuesday"
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("wednesday").addEventListener("click", function () {
+  day = 3;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Wednesday" 
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("thursday").addEventListener("click", function () {
+  day = 4;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Thursday" 
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("friday").addEventListener("click", function () {
+  day = 5;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Friday"
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
+
+document.getElementById("saturday").addEventListener("click", function () {
+  day = 6;
+  var text = document.querySelector(".day-of-week");
+  text.textContent = "Saturday" 
+  var textDescriptions = document.querySelectorAll(".description");
+  var position = 0;
+  var display = document.querySelector("#display");
+  display.classList.remove("hidden");
+  for (var key in weeklySchedule[day]) {
+    console.log(weeklySchedule[day][key]);
+    console.log(textDescriptions[position]);
+    textDescriptions[position].value = weeklySchedule[day][key];
+    position++;
+  }
+});
