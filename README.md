@@ -13,5 +13,6 @@ This scheduler uses GitHub, VS Code, Terminal, Bash, Bulma, OpenWeather API, and
 
 ## Links:
 https://rtleib.github.io/Star-Wars-Weekly-Scheduler/
+
 https://github.com/rtleib/Star-Wars-Weekly-Scheduler
 
