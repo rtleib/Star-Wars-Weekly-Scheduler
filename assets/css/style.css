@@ -146,10 +146,10 @@ textarea{
   float: left;
 }
 
-.day-of-forecast{
+.box{
   box-shadow: 0 0 2em white;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.418);
+  background-color: rgba(0, 0, 0, 0.9);
   margin: -200;
 }
 
