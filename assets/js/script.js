@@ -170,11 +170,40 @@ var cityWeather = function(coord) {
 
   var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
   var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coord.lat + "&lon=" + coord.lon + "&exclude=minutely,hourly,current&units=imperial&appid=" + APIKey;
+  var forecastEl = document.getElementsByClassName('forecast');
 
   fetch(weatherUrl).then(function (response) {
     if (response.ok) {
+
+      forecastEl[0].classList.add('loaded');
+
       response.json().then(function (data) {
-        displayWeather(data.daily);
+        console.log(data);
+        
+        var fDay = '';
+        data.daily.forEach((value, index) => {
+        
+          if (index > 0) {
+            var dayName = new Date(value.dt * 1000).toLocaleDateString('en', {
+              weekday: 'long',
+            });
+            
+            var icon = value.weather[0].icon;
+            var showIcon = document.createElement('img');
+            showIcon.src = 'http://openweathermap.org/img/wn/' + icon + '@2x.png';
+            console.log(showIcon);
+            console.log(icon);
+            var temp = value.temp.day.toFixed(0);
+
+            fDay = `<div class = 'forecast-day column is-flex-wrap-wrap'>
+                      <p>${dayName}</p>
+                      <p><img class='icon' title = 'icon' src='http://openweathermap.org/img/wn/${icon}@2x.png'></p>
+                      <div class = 'forecast-day--temp'>${temp}<sup>°F</sup></div>
+                    </div>`;
+            
+            forecastEl[0].insertAdjacentHTML('beforeend', fDay);
+          };
+        });
       });
     };
   });
