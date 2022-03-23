@@ -17,5 +17,5 @@ My Links:
 
 https://rtleib.github.io/Star-Wars-Weekly-Scheduler/
 
-
+https://github.com/rtleib/Star-Wars-Weekly-Scheduler
 
