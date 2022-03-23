@@ -68,24 +68,55 @@ var cityWeather = function(coord) {
 
   var APIKey = "28a7fce4f20896b97ae391942a7e9c8d";
   var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coord.lat + "&lon=" + coord.lon + "&exclude=minutely,hourly,current&units=imperial&appid=" + APIKey;
+  var forecastEl = document.getElementsByClassName('forecast');
 
   fetch(weatherUrl).then(function (response) {
     if (response.ok) {
+
+      forecastEl[0].classList.add('loaded');
+
       response.json().then(function (data) {
-        displayWeather(data.daily);
+        console.log(data);
+        
+        var fDay = '';
+        data.daily.forEach((value, index) => {
+          if (index > 0) {
+            var dayName = new Date(value.dt * 1000).toLocaleDateString('en', {
+              weekday: 'long',
+            });
+            var icon = value.weather[0].icon;
+            var temp = value.temp.day.toFixed(0);
+
+            fDay = `<div class = 'forecast-day column is-2 is-flex-wrap-wrap'>
+                      <p>${dayName}</p>
+                      <p><span class='ico-${icon}' title = '${icon}'></span></p>
+                      <div class = 'forecast-day--temp'>${temp}<sup>°F</sup></div>
+                    </div>`;
+            forecastEl[0].insertAdjacentHTML('beforeend', fDay);
+          };
+        });
+        
       });
     };
   });
 };
 
-var displayWeather = function (display) {
-  console.log(display);
+// var forecastEl = document.getElementsByClassName('forecast');
 
-  for (property in display) {
-    console.log(property, display[property]);
+// var displayWeather = function(display) {
+//   console.log(display);
+  
+
+//   // for (property in display) {
+//   //   console.log(property, display[property]);
+//   //   var { icon, description} = property.weather;
+//   //   var { temp } = temp.day;
+//   //   var { humidity } = display.humidity;
+//   //   var { speed } = display.wind;
+//   //   console.log(icon, description, temp, humidity, speed);
     
-  };
-};
+//   // };
+// };
 
 userInput.addEventListener('submit', formHandler);
 

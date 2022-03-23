@@ -180,21 +180,17 @@
   </form>
   </div>
  
-  <div class="column is-12 box day-of-forecast">
+  <div class="column is-12 box">
                
-    <h2 class="subtitle is-5 city-name"></h2>
+    <h2 class="subtitle is-5 has-text-center city-name"></h2>
  
-    <div class="columns">
-        <div class="display column is-6">
-            <div class="subtitle is-6 sky-description"></div>
-            <p class="subtitle is-6">
-                Temp: <span id="temp"></span> F <br>
-                Humidity: <span id="humidity"></span>% <br>
-                Wind: <span id="wind"></span>mph <br>
-                UV Index: <span id="uv"></span>
-            </p>
+    <section class = "weather">
+      <div class = "container">
+        <div class = "forecast columns is-flex-wrap-wrap">
+          <!-- here we populate the 7 days forecast -->
         </div>
-    </div>
+      </div>
+    </section>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
