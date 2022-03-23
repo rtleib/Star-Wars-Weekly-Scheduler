@@ -1,9 +1,9 @@
 /* background image */
 body {
   background-image:url(../images/starwars-stars.jpeg);
-  position: fixed;
+  /* position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100%; */
 }
 
 /*styling weekday bottons */
@@ -12,13 +12,13 @@ body {
   font-size: 23px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 14px 40px;
-  border-radius: 2px;
   width: 100%;
   border: 1px solid black;
   margin-top: 15px;
   margin-bottom: 20px;
   cursor: pointer;
-  border-radius: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 /* hover for weekday bottons */
@@ -138,4 +138,9 @@ body {
   padding-left: 25px;
   box-shadow: 0px 4px #ffe81f, 0 0 2em white;
   border-radius: 15px;
+}
+
+/* hide daily scheduler until a button is clicked */
+.hidden {
+  visibility: hidden;
 }
