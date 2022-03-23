@@ -195,25 +195,55 @@ textarea{
   align-items: center;
 }
 
-@media only screen and (max-width:575px) {
+@media only screen and (max-width:768px) {
+  .weekday-btns{
+    padding: 0;
+    margin: 20px;
+  }
+
   .weekday-btn{
     padding: 5px;
     margin: 0;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
   }
+  .title img {
+    display: none;
+  } 
+  .time-block{
+    align-items: center;
+    align-content: center;
+  }
+  .saveBtn{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin: 10px;
+  }
+  textarea {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width:575px) {
   .weekday-btns{
     padding: 0;
     margin: 10px;
-
   }
   .weekday {
     padding: 3px;
   }
   .saveIcon {
-  width: 10px;
+  width: 20px;
   }
   #today {
     font-size: 20px;
   }
+  .daily-schedule {
+    height: 400px;
+  }
+  .saveBtn {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
