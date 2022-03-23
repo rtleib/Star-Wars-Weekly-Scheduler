@@ -87,7 +87,7 @@ var cityWeather = function(coord) {
             var icon = value.weather[0].icon;
             var temp = value.temp.day.toFixed(0);
 
-            fDay = `<div class = 'forecast-day column is-2 is-flex-wrap-wrap'>
+            fDay = `<div class = 'forecast-day column is-flex-wrap-wrap'>
                       <p>${dayName}</p>
                       <p><span class='ico-${icon}' title = '${icon}'></span></p>
                       <div class = 'forecast-day--temp'>${temp}<sup>°F</sup></div>
@@ -100,23 +100,6 @@ var cityWeather = function(coord) {
     };
   });
 };
-
-// var forecastEl = document.getElementsByClassName('forecast');
-
-// var displayWeather = function(display) {
-//   console.log(display);
-  
-
-//   // for (property in display) {
-//   //   console.log(property, display[property]);
-//   //   var { icon, description} = property.weather;
-//   //   var { temp } = temp.day;
-//   //   var { humidity } = display.humidity;
-//   //   var { speed } = display.wind;
-//   //   console.log(icon, description, temp, humidity, speed);
-    
-//   // };
-// };
 
 userInput.addEventListener('submit', formHandler);
 

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css"></link>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  </link>
   <title>Weekly Schedule</title>
 </head>
+
 <body>
   <main class="columns">
     <!-- left side with weather pane and weekly scheduler -->
@@ -54,7 +57,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -65,7 +68,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -76,7 +79,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -98,7 +101,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -109,7 +112,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -120,7 +123,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -131,7 +134,7 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
@@ -142,14 +145,14 @@
           <div class="col-2">
             <div class="saveBtn">
               <img class="saveIcon" src="./assets/images/save-icon-black.png" alt="A small gold icon of C-3PO's face">
-              <p>Save</p> 
+              <p>Save</p>
             </div>
           </div>
         </div>
       </div>
 
 
-      
+
 
     </div>
 
@@ -160,7 +163,7 @@
         <img class="column is-12" src="./assets/images/weekly.png" alt="Daily Schedule written in the Star Wars font">
         <img class="column is-12" src="./assets/images/schedule.png" alt="Daily Schedule written in the Star Wars font">
       </div>
-      
+
 
       <!-- need div for quote -->
       <div class="quote" id="random-quote"></div>
@@ -171,28 +174,31 @@
   </main>
 
   <!-- weekly forecast div to show weather for week -->
-  <div class="column is-3">
-    <h2 class="">City:</h2>
- 
-    <form id="value">
-      <input name="city" id="city-input" class="input" type="text" placeholder="City">
-      <button type="submit" class="btn">Search</button>
-  </form>
-  </div>
- 
-  <div class="column is-12 box">
-               
-    <h2 class="subtitle is-5 has-text-center city-name"></h2>
- 
-    <section class = "weather">
-      <div class = "container">
-        <div class = "forecast columns is-flex-wrap-wrap">
-          <!-- here we populate the 7 days forecast -->
-        </div>
-      </div>
-    </section>
+  <div class="columns weather-display">
+    <div class="column is-2">
+      <h2 class="">City:</h2>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+      <form id="value">
+        <input name="city" id="city-input" class="input" type="text" placeholder="City">
+        <button type="submit" class="searchBtn">Search</button>
+      </form>
+    </div>
+
+    <div class="column is-6 box">
+
+      <h2 class="subtitle is-5 has-text-center city-name"></h2>
+
+      <section class="weather">
+        <div class="container">
+          <div class="forecast columns is-flex-wrap-wrap">
+            <!-- here we populate the 7 days forecast -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
